@@ -9,5 +9,5 @@ class EvitarObst(Reaccao):
         return estimulo
 
     def gerar_resposta(self, estimulo):
-        resposta = (1, ESQ)
+        resposta = (0, ESQ)
         return Resposta(resposta)

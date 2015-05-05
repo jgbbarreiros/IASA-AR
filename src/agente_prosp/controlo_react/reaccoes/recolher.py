@@ -4,8 +4,10 @@ from evitar_obst import EvitarObst
 from explorar import Explorar
 from contornar_obst import ContornarObst
 from aproximar_alvo import AproximarAlvo
+from seguir_potencial import SeguirPotencial
 
 class Recolher(Comportamento):
 
     def __init__(self):
-        super(Recolher, self).__init__(Hierarquia(), [AproximarAlvo(), EvitarObst(), ContornarObst(), Explorar()])
+        super(Recolher, self).__init__(Hierarquia(), [AproximarAlvo(), EvitarObst(), ContornarObst(),
+                                                      SeguirPotencial(), Explorar()])
