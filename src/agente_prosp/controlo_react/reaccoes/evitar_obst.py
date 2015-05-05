@@ -1,6 +1,7 @@
-from psa.actuador import ESQ, DIR, FRT
 from ecr.reaccao import Reaccao
+from psa.actuador import ESQ, FRT
 from ecr.resposta import Resposta
+
 
 class EvitarObst(Reaccao):
 
@@ -9,5 +10,4 @@ class EvitarObst(Reaccao):
         return estimulo
 
     def gerar_resposta(self, estimulo):
-        resposta = (0, ESQ)
-        return Resposta(resposta)
+        return Resposta((0, ESQ))

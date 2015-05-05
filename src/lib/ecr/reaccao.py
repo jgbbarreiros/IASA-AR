@@ -1,5 +1,6 @@
 from esquema_comport import EsquemaComport
 
+
 class Reaccao(EsquemaComport):
 
     def detectar_estimulo(self, percepcao):

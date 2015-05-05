@@ -1,7 +1,8 @@
+from ecr.esquema_comport import EsquemaComport
 from random import choice
 from psa.actuador import ESQ, DIR, FRT
-from ecr.esquema_comport import EsquemaComport
 from ecr.resposta import Resposta
+
 
 class Explorar(EsquemaComport):
 

@@ -1,6 +1,7 @@
 from controlo import Controlo
 from reaccoes.recolher import Recolher
 
+
 class ControloReact(Controlo):
 
     def __init__(self):

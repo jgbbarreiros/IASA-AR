@@ -1,7 +1,8 @@
 from ecr.comportamento import Comportamento
+from ecr.coord.prioridade import Prioridade
 from psa.actuador import ESQ, DIR, FRT
 from aproximar_alvo_dir import AproximarAlvoDir
-from ecr.coord.prioridade import Prioridade
+
 
 class AproximarAlvo(Comportamento):
 
