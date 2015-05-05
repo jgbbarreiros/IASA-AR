@@ -1,10 +1,10 @@
 from controlo import Controlo
-from reaccoes.explorar import Explorar
+from reaccoes.recolher import Recolher
 
 class ControloReact(Controlo):
 
     def __init__(self):
-        self._reacao = Explorar()
+        self._reacao = Recolher()
 
     def processar(self, percepcao):
         resposta = self._reacao.activar(percepcao)

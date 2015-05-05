@@ -1,4 +1,4 @@
-class EsquemaComport:
+class EsquemaComport(object):
 
     def activar(self, percepcao):
         abstract

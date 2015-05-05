@@ -1,4 +1,4 @@
-from esquema_coord import EsquemaCoord
+from ecr.coord.esquema_coord import EsquemaCoord
 
 
 class Hierarquia(EsquemaCoord):
