@@ -11,5 +11,5 @@ from agente_prospector import AgentePrpospector
 from controlo_react.controlo_react import ControloReact
 
 #Activacao
-psa.iniciar("amb/amb1.das")
+psa.iniciar("amb/amb3.das")
 psa.executar(AgentePrpospector(ControloReact()))
