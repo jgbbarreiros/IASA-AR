@@ -14,5 +14,5 @@ class Comportamento(EsquemaComport):
             if resposta is not None:
                 respostas.append(resposta)
         if respostas:
-            resposta_selecionada = self._esquema_coord.selecionar_resposta(respostas)
+            resposta_selecionada = self._esquema_coord.seleccionar_resposta(respostas)
             return resposta_selecionada

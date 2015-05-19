@@ -1,4 +1,4 @@
 class EsquemaCoord:
 
-    def selecionar_resposta(self, respostas):
+    def seleccionar_resposta(self, respostas):
         abstract

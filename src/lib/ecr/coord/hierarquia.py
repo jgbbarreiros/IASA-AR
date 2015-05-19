@@ -3,5 +3,5 @@ from esquema_coord import EsquemaCoord
 
 class Hierarquia(EsquemaCoord):
 
-    def selecionar_resposta(self, respostas):
+    def seleccionar_resposta(self, respostas):
         return respostas[0]

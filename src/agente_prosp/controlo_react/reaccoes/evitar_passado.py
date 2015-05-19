@@ -4,9 +4,9 @@ from explorar import Explorar
 class EvitarPassado(Reaccao):
 
     def __init__(self):
-        self.m = []
-        self.m_max = 20
-        self.explorar = Explorar()
+        self._memoria = []
+        self._memoria_max = 20
+        self._explorar = Explorar()
 
     def detectar_estimulo(self, percepcao):
         return percepcao.posicao
@@ -16,15 +16,14 @@ class EvitarPassado(Reaccao):
         self._memorizar(estimulo)
         self._esquecer()
         if recordar:
-            print self.explorar.activar().accao
-            return self.explorar.activar()
+            return self._explorar.activar()
 
     def _recordar(self, posicao):
-        return posicao in self.m
+        return posicao in self._memoria
 
     def _esquecer(self):
-        if len(self.m) > self.m_max:
-            self.m.pop(0)
+        if len(self._memoria) > self._memoria_max:
+            self._memoria.pop(0)
 
     def _memorizar(self, posicao):
-        self.m.append(posicao)
+        self._memoria.append(posicao)
