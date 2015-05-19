@@ -7,6 +7,10 @@ class AprendDynaQ(AprendQ):
         self._T = None
         self._R = None
         self._num_sim = num_sim
+
+    def aprender(self, s, a, r, sn):
+        # actualizar T(s, a) e R(s, a)
+        #
         pass
 
     def _simular(self):
