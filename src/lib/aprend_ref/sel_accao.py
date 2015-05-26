@@ -1,4 +1,5 @@
 from psa.util import argmax
+from random import shuffle
 
 
 class SelAccao(object):
@@ -9,6 +10,7 @@ class SelAccao(object):
 
     def max_accao(self, s):
         # selecionar a accao com melhor recompensa
+        shuffle(self._accoes)
         return argmax(self._accoes, lambda a: self._mem_aprend[(s, a)])
 
     def seleccionar_accao(self, s):

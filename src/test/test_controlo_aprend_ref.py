@@ -11,5 +11,5 @@ from agente_prospector import AgentePrpospector
 from controlo_aprend.controlo_aprend_ref import ControloAprendRef
 
 #Activacao
-psa.iniciar("amb/amb5.das", alvo_ini=True)
+psa.iniciar("amb/amb6.das", alvo_ini=True)
 psa.executar(AgentePrpospector(ControloAprendRef()))
