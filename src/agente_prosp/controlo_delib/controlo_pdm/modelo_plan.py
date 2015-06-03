@@ -1,7 +1,7 @@
-from pdm.modelo import Modelo
-from psa.util import dist
+from pdm.modeloPDM import ModeloPDM
 
-class ModeloPlan(Modelo):
+
+class ModeloPlan(ModeloPDM):
 
     def __init__(self, modelo_mundo, objectivos, r_max):
         self._modelo_mundo = modelo_mundo
@@ -21,11 +21,11 @@ class ModeloPlan(Modelo):
             return self._modelo_mundo.simular_accao(s, a)
 
     def R(self, s, a, sn):
-        r = -self._modelo_mundo.custo_accao(s, a, sn) # dist(s,sn)
-        if sn is self._objectivos:
+        r = -self._modelo_mundo.custo_accao(s, a, sn)
+        if sn in self._objectivos:
             r += self._r_max
         elif s == sn:
-            r += -self._r_max
+            r -= self._r_max
         return r
 
 

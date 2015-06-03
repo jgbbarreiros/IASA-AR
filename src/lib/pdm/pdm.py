@@ -1,5 +1,6 @@
 from psa.util import argmax
 
+
 class PDM:
 
     def __init__(self, modelo, delta_max, gama):

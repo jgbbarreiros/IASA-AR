@@ -1,11 +1,13 @@
 from controlo import Controlo
+from modelo_mundo import ModeloMundo
+
 
 class ControloDelib(Controlo):
 
-    def __init__(self, modelo_mundo, desejos, intencoes):
-        self._crencas = modelo_mundo
-        self._desejos = desejos
-        self._intencoes = intencoes
+    def __init__(self):
+        self._crencas = ModeloMundo()
+        self._desejos = None
+        self._intencoes = None
 
     def processar(self, percepcao):
         self._actualizar_crencas(percepcao)
@@ -34,7 +36,7 @@ class ControloDelib(Controlo):
         abstract
 
     def _gerar_opcoes(self):
-        pass
+        return self._crencas.pos_alvos()
 
     def _seleccionar_opcoes(self):
-        pass
+        return self._desejos

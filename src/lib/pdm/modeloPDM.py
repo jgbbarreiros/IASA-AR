@@ -1,4 +1,4 @@
-class Modelo(object):
+class ModeloPDM():
 
     def S(self):
         abstract
