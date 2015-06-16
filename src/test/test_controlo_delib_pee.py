@@ -19,5 +19,5 @@ from pee.melhorprim.procura_sofrega import ProcuraSofrega
 from pee.melhorprim.procura_aa import ProcuraAA
 
 #Activacao
-psa.iniciar("amb/amb4.das")
-psa.executar(AgentePrpospector(ControloPEE(ProcuraLarg())))
+psa.iniciar("amb/amb4.das")#, dinamb=0.1)
+psa.executar(AgentePrpospector(ControloPEE(ProcuraAA())))

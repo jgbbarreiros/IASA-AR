@@ -1,13 +1,12 @@
-from pee.modprob.problema_heur import ProblemaHeur
+from pee.modprob.problema import Problema
 from psa import dist
 
 
-class ProblemaPlan(ProblemaHeur):
+class ProblemaPlan(Problema):
 
     def __init__(self, estado_inicial, estado_final, operadores):
-        self._estado_inicial = estado_inicial
+        Problema.__init__(self, estado_inicial, operadores)
         self._estado_final = estado_final
-        self._operadores = operadores
 
     def objectivo(self, estado):
         return estado == self._estado_final
