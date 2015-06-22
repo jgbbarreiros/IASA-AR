@@ -15,18 +15,15 @@ class ControloPEE(ControloDelib):
         self._plano = []
 
     def _reconsiderar(self):
-        # talvez reconsiderar algo mais
         return not self._plano
 
     def _planear(self):
         if self._intencoes:
-            # perceber que estado final tenho que passar
             problema = ProblemaPlan(self._crencas.estado(), self._intencoes[0], self._operadores)
             solucao = self._mec_proc.procurar(problema)
             self._plano = [no.operador for no in solucao[1:]]
 
     def _executar(self):
-        # percorrer a solucao
         if self._plano:
             psa.vismod.elementos(self._crencas._imagem)
             psa.vismod.plano(self._crencas.estado(), self._plano)

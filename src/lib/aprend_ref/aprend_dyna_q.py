@@ -14,6 +14,7 @@ class AprendDynaQ(AprendQ):
         self._R = dict() # R(s, a) recompensa local
 
     def aprender(self, s, a, r, sn):
+        super(AprendDynaQ, self).aprender(s, a, r, sn)
         self._actualizar_modelo(s, a, r, sn)
         self._simular()
 

@@ -11,5 +11,5 @@ from agente_prospector import AgentePrpospector
 from controlo_delib.controlo_pdm.controlo_pdm import ControloPDM
 
 #Activacao
-psa.iniciar("amb/amb4.das")
+psa.iniciar("amb/amb1.das")
 psa.executar(AgentePrpospector(ControloPDM()))

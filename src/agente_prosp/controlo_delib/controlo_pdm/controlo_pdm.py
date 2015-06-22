@@ -25,6 +25,8 @@ class ControloPDM(ControloDelib):
             self._PI = pdm.politica(U)
             psa.vismod.campo(U)
             psa.vismod.politica(self._PI)
+        else:
+            self._PI = None
 
     def _executar(self):
         if self._PI:
